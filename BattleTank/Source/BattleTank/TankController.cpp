@@ -3,6 +3,7 @@
 
 #include "TankController.h"
 #include "BattleTank.h"
+#include "Tank.h"
 #include "Engine/World.h"
 
 //Tink
