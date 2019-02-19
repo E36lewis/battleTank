@@ -29,6 +29,7 @@ void UTankAimingComponent::SetTurrentReference(UTankTurrent* TurrentToSet)
 }
 
 
+
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 {
 	if (!Barrel) { return; }
@@ -50,15 +51,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 	{
 		auto AimDirection = OutLaunchVelocity.GetSafeNormal();
 		MoveBarrelTowards(AimDirection);
-		auto Time = GetWorld()->GetTimeSeconds();
-		UE_LOG(LogTemp, Warning, TEXT("%f: aiming at "), Time);
 	}
-	else
-	{
-		auto Time = GetWorld()->GetTimeSeconds();
-		UE_LOG(LogTemp, Warning, TEXT("%f: not aiming at"), Time);
-	}
-	//no solution
 }
 
 //UE_LOG(LogTemp, Warning, TEXT("%s aming at %s"), *AimDirection.ToString());
